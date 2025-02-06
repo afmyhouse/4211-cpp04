@@ -6,15 +6,13 @@
 #    By: antoda-s <antoda-s@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/30 10:38:51 by antoda-s          #+#    #+#              #
-#    Updated: 2024/05/08 20:42:26 by antoda-s         ###   ########.fr        #
+#    Updated: 2024/05/17 13:22:35 by antoda-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
 # compilation, linking and cleaning commands/flags
 CXX	= c++
-#CF	= -Wall -Wextra -Werror -std=c++98 -g
-CF	= -Wall -Wextra -Werror -Wshadow -std=c++98 -g
+CF	= -Wall -Wextra -Werror -std=c++98 -g
 MKF	= --no-print-directory
 AR	= ar -rcs
 
@@ -28,7 +26,7 @@ OBJSD 	= build/
 
 # files
 NAME 	= ex02
-FILES	= main ClapTrap ScavTrap FragTrap
+FILES	= main AAnimal Dog Cat Brain
 OBJS	= $(FILES:%=%.o)
 TARGET	= $(addprefix $(OBJSD), $(OBJS))
 
@@ -40,7 +38,7 @@ LF 			= --leak-check=full \
 				--track-origins=yes \
 				--verbose \
 				--log-file=$(LEAKS_FILE) \
-				./$(NAME) 
+				./$(NAME)
 
 #Colors:
 GRN		=	\e[38;5;118m

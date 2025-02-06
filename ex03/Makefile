@@ -6,15 +6,13 @@
 #    By: antoda-s <antoda-s@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/30 10:38:51 by antoda-s          #+#    #+#              #
-#    Updated: 2024/05/10 12:39:19 by antoda-s         ###   ########.fr        #
+#    Updated: 2024/05/17 13:30:45 by antoda-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
 # compilation, linking and cleaning commands/flags
 CXX	= c++
-#CF	= -Wall -Wextra -Werror -std=c++98 -g
-CF	= -Wall -Wextra -Werror -Wshadow -std=c++98 -g
+CF	= -Wall -Wextra -Werror -std=c++98 -g
 MKF	= --no-print-directory
 AR	= ar -rcs
 
@@ -28,7 +26,7 @@ OBJSD 	= build/
 
 # files
 NAME 	= ex03
-FILES	= main ClapTrap ScavTrap FragTrap DiamondTrap
+FILES	= main AMateria Character Cure Ice MateriaSource
 OBJS	= $(FILES:%=%.o)
 TARGET	= $(addprefix $(OBJSD), $(OBJS))
 

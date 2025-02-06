@@ -6,10 +6,9 @@
 #    By: antoda-s <antoda-s@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/30 10:38:51 by antoda-s          #+#    #+#              #
-#    Updated: 2024/05/08 22:12:13 by antoda-s         ###   ########.fr        #
+#    Updated: 2024/05/17 13:29:07 by antoda-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 # compilation, linking and cleaning commands/flags
 CXX	= c++
@@ -27,7 +26,7 @@ OBJSD 	= build/
 
 # files
 NAME 	= ex00
-FILES	= main ClapTrap
+FILES	= main Animal Dog Cat WrongAnimal WrongCat
 OBJS	= $(FILES:%=%.o)
 TARGET	= $(addprefix $(OBJSD), $(OBJS))
 
@@ -39,7 +38,7 @@ LF 			= --leak-check=full \
 				--track-origins=yes \
 				--verbose \
 				--log-file=$(LEAKS_FILE) \
-				./$(NAME) 
+				./$(NAME)
 
 #Colors:
 GRN		=	\e[38;5;118m

@@ -6,15 +6,13 @@
 #    By: antoda-s <antoda-s@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/30 10:38:51 by antoda-s          #+#    #+#              #
-#    Updated: 2024/05/10 14:43:12 by antoda-s         ###   ########.fr        #
+#    Updated: 2024/05/17 13:28:59 by antoda-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
 # compilation, linking and cleaning commands/flags
 CXX	= c++
-#CF	= -Wall -Wextra -Werror -std=c++98 -g
-CF	= -Wall -Wextra -Werror -Wshadow -std=c++98 -g
+CF	= -Wall -Wextra -Werror -std=c++98 -g
 MKF	= --no-print-directory
 AR	= ar -rcs
 
@@ -28,7 +26,7 @@ OBJSD 	= build/
 
 # files
 NAME 	= ex01
-FILES	= main ClapTrap ScavTrap
+FILES	= main Animal Dog Cat WrongAnimal WrongCat Brain
 OBJS	= $(FILES:%=%.o)
 TARGET	= $(addprefix $(OBJSD), $(OBJS))
 
