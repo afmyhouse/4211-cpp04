@@ -98,6 +98,7 @@ void Character::unequip(int idx)
 	std::cout << this->name + " dropped " + this->inventory[idx]->getType() << std::endl;
 	this->unequiped[idx] = this->inventory[idx];
 	this->inventory[idx] = NULL;
+	this->inventorySize--;
 }
 
 void Character::use(int idx, ICharacter& target)
